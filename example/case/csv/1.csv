@@ -1,0 +1,3 @@
+Command,Target,Value
+click,//*[@id="su"],
+clearAndInput,//*[@id="kw"],Good

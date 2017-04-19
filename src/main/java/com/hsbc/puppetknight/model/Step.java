@@ -40,4 +40,33 @@ public class Step {
     public void setValue(String value) {
         this.value = value;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Step step = (Step) o;
+
+        if (!command.equals(step.command)) return false;
+        if (target != null ? !target.equals(step.target) : step.target != null) return false;
+        return value != null ? value.equals(step.value) : step.value == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = command.hashCode();
+        result = 31 * result + (target != null ? target.hashCode() : 0);
+        result = 31 * result + (value != null ? value.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Step{" +
+                "command='" + command + '\'' +
+                ", target='" + target + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
 }

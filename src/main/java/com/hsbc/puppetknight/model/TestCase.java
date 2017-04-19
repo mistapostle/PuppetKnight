@@ -5,13 +5,13 @@ import java.util.List;
 /**
  * Created by mistapostle on 17/4/8.
  */
-public class Case {
+public class TestCase {
     private List<Step> steps ;
 
-    public Case(List<Step> steps) {
+    public TestCase(List<Step> steps) {
         this.steps = steps;
     }
-    public Case(){}
+    public TestCase(){}
 
     public List<Step> getSteps() {
         return steps;
